@@ -9,7 +9,7 @@ public class Main {
         final byte MONTHS_IN_YEAR = 12;
         final byte PERCENT = 100;
 
-        int principal = 0;
+        int principal = 0;          // Initialize
         float monthlyInterest = 0;
         int numberOfPayments = 0;
 
@@ -19,7 +19,7 @@ public class Main {
                 principal = scanner.nextInt();
                 if (principal >= 1000 && principal <= 1_000_000)
                     break;
-                System.out.println("Enter a value between 1,000 and 1,000,000");
+                System.out.println("Enter a value between 1,000 and 1,000,000");    // Error catching
             }
 
             while (true) {
@@ -29,7 +29,7 @@ public class Main {
                     monthlyInterest = anualInterest /  PERCENT / MONTHS_IN_YEAR;
                     break;
                 }
-                System.out.println("Enter a value between 1 and 30");
+                System.out.println("Enter a value between 1 and 30");               // Error catching
             }
 
             while (true) {
@@ -39,7 +39,7 @@ public class Main {
                     numberOfPayments = years * MONTHS_IN_YEAR;
                     break;
                 }
-                System.out.println("Enter a value between 1 and 30");
+                System.out.println("Enter a value between 1 and 30");               // Error catching
             }
         }
 
@@ -51,3 +51,11 @@ public class Main {
         System.out.println("Mortgage: " + mortgageFortmatted);
     }
 }
+
+//------------
+//⦔--NOTES--⦓
+//------------
+//  - Work on a basic GUI
+//  - Add option to do multiple mortgages at once
+//  - Add fail-safe catching during mutiple mortgages
+//
